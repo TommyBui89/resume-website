@@ -41,7 +41,6 @@ const styles = {
   section: {
     padding: '20px',
     borderRadius: '10px',
-    boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -64,7 +63,6 @@ const styles = {
     borderRadius: '5px',
     color: 'white',
     margin: '10px', // increased margin
-    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
     width: '120px', // increased width
     height: '120px', // increased height
     display: 'flex',

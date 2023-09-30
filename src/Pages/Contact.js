@@ -2,7 +2,7 @@ import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 
 function Contact() {
-  const resumeURL = 'https://github.com/TommyBui89/resume-website/raw/3129406af0ff74ecc74d220e093338f365329ac5/Tommy%27s%20Resume%202023.pdfx';
+  const resumeURL = 'https://github.com/TommyBui89/resume-website/raw/main/Tommy%27s%20Resume%202023.pdf';
   
   return (
     <section style={styles.section}>
