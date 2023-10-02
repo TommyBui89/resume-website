@@ -87,7 +87,7 @@ const styles = {
   downloadButton: {
     display: 'inline-flex',
     alignItems: 'center',
-    backgroundColor: '#4CAF50',
+    backgroundColor: 'lightblue',
     color: 'white',
     padding: '10px 20px',
     textDecoration: 'none',

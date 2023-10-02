@@ -1,13 +1,18 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import ProfilePicture from '../Resources/ProfilePicture.jpg';
+
 
 function MenuBar() {
   return (
     <Navbar expand="lg" className="bg-transparent" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px 0' }}>
       <Container fluid className="justify-content-center">
-        <LinkContainer to="/home">
-          <Navbar.Brand style={{ color: 'white', marginRight: 'auto', fontSize: '50px', fontWeight: 'bold' }}>Tommy Bui</Navbar.Brand>
+      <LinkContainer to="/">
+          <Navbar.Brand style={{ display: 'flex', alignItems: 'center', color: 'white', marginRight: 'auto', fontSize: '50px', fontWeight: 'bold' }}>
+            <img src={ProfilePicture} alt="Tommy Bui" style={{ width: '40px', height: '40px', borderRadius: '50%', marginRight: '10px', objectFit:'cover' }} />
+            Tommy Bui
+          </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">

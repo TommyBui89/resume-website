@@ -18,7 +18,7 @@ function Experience() {
       company: 'Spectar Group · Internship',
       duration: 'Aug 2023 - Present · 2 mos',
       location: 'Melbourne, Victoria, Australia · Hybrid',
-      skills: 'Skills: React.js',
+      skills: 'Skills: React.js, Node.js, Figma, Github',
     },
     {
       logo: RolldLogo,
@@ -27,6 +27,7 @@ function Experience() {
       company: "Rolld Australia Pty Ltd · Part-time",
       duration: 'Feb 2022 - Present · 1 yr 8 mos',
       location: 'Melbourne, Victoria, Australia',
+      skills: 'Skills: Team work'
     },
     {
       logo: ITBoostAustraliaLogo,
@@ -35,7 +36,7 @@ function Experience() {
       company: 'IT BOOST Australia · Internship',
       duration: 'May 2023 - Aug 2023 · 4 mos',
       location: 'South Melbourne, Victoria, Australia · Hybrid',
-      skills: 'Skills: SEO, HTML, CSS, Java, Figma',
+      skills: 'Skills: SEO, HTML, CSS, Java, Figma, Github',
     },
   ];
 
