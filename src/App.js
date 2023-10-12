@@ -1,44 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import the BrowserRouter component
-
+import { BrowserRouter as Router } from 'react-router-dom';
 import MenuBar from './Components/MenuBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RoutesConfig from './Route';
 import MainBackground from './Resources/MainBackground.jpeg';
-
 import ParticlesBackground from './Components/ParticlesBackground';
 
 function App() {
-    return (
-      <div style={{
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 600);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const containerStyle = {
         display: 'flex',
         width: '100vw',
-        height: '100vh', // Updated this line to use 'vh' instead of '%'
+        height: '100vh',
         backgroundImage: `url(${MainBackground})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         flexDirection: 'column',
-        overflow: 'hidden', // Added to prevent scroll
-      }}>
-        <ParticlesBackground />
-          <div style={{
-            backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
-            borderRadius: '10px',
-            padding: '20px',
-            margin: '40px',
-            height: 'calc(100vh - 80px)', // Adjusted to account for margins
-          }}>
-              <Router>
-                  <MenuBar />
-                  <RoutesConfig />
-              </Router>
-          </div>
-      </div>
+        overflow: 'hidden',
+    };
+
+    const innerDivStyle = {
+        backdropFilter: 'blur(10px)',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+        boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
+        borderRadius: '10px',
+        padding: isMobile ? '10px' : '20px',
+        margin: isMobile ? '20px' : '40px',
+        height: isMobile ? 'calc(100vh - 40px)' : 'calc(100vh - 80px)',
+    };
+
+    return (
+        <div style={containerStyle}>
+            <ParticlesBackground />
+            <div style={innerDivStyle}>
+                <Router>
+                    <MenuBar />
+                    <RoutesConfig />
+                </Router>
+            </div>
+        </div>
     );
-  }
-  
+}
 
 export default App;

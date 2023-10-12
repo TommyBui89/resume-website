@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 
 function Contact() {
   const resumeURL = 'https://github.com/TommyBui89/resume-website/raw/main/Tommy%27s%20Resume%202023.pdf';
   
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+  useEffect(() => {
+      const handleResize = () => {
+          setIsMobile(window.innerWidth <= 600);
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => {
+          window.removeEventListener('resize', handleResize);
+      };
+  }, []);
+
   return (
     <section style={styles.section}>
-      <h2 style={styles.heading}>Contact</h2>
+      <h2 
+        style={{textAlign: 'center', marginBottom: '20px', color: 'white', fontSize: isMobile ? '2rem' : '4rem'}}>Contact</h2>
       <div style={styles.contactInfo}>
         <p style={styles.contactItem}>
           <i className="fa fa-envelope" style={styles.icon}></i> 
@@ -42,7 +56,6 @@ const styles = {
   section: {
     padding: '20px',
     borderRadius: '10px',
-    boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -51,10 +64,7 @@ const styles = {
     margin: 'auto',
   },
   heading: {
-    textAlign: 'center',
-    marginBottom: '20px',
-    color: 'white',
-    fontSize: '2em',
+
   },
   contactInfo: {
     display: 'flex',

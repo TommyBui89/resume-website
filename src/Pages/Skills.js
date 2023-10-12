@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // logos
 import javascriptLogo from '../Resources/javascriptLogo.png';
@@ -21,64 +21,74 @@ function Skills() {
     { skill: 'Python', level: 70, logo: pythonLogo },
     { skill: 'Git', level: 90, logo: gitLogo },
   ];
+  
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 600);
+      };
+  
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
+    return (
+      <section style={{ ...styles.section, fontSize: isMobile ? '2rem' : '5rem' }}>
+        <h2 style={{fontSize: isMobile ? '2rem' : '4rem', color: 'white', marginBottom:'22px'}}>Skills</h2>
+  
+        <div style={{ ...styles.grid, flexDirection: isMobile ? 'column' : 'row' }}>
+          {skillList.map((item, index) => (
+            <div key={index} style={styles.gridItem}>
+              <img src={item.logo} alt={item.skill} style={{ maxWidth: isMobile ? '20vw' : '5vw', maxHeight: isMobile ? '20vw' : '5vw', marginBottom: '10px',}} />
+              <span style={styles.skillName}>{item.skill}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
+  
+  const styles = {
+    section: {
+      padding: '20px',
+      borderRadius: '10px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      margin: 'auto',
+    },
+    grid: {
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      flexWrap: 'wrap',
+      width: '100%',
+    },
+    gridItem: {
+      border: '1px solid white',
+      width: '250px',
+      height: '200px',
+      padding: '10px',
+      textAlign: 'center',
+      position: 'relative',
+      borderRadius:'5px',
+      background: 'rgba(0, 0, 0, 0.1)',
+      margin: '10px auto',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    logo: {
 
-  return (
-    <section style={styles.section}>
-      <h2 style={styles.heading}>Skills</h2>
-      <div style={styles.grid}>
-        {skillList.map((item, index) => (
-          <div key={index} style={styles.gridItem}>
-            <img src={item.logo} alt={item.skill} style={styles.logo} />
-            <span style={styles.skillName}>{item.skill}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-const styles = {
-  section: {
-    padding: '20px',
-    borderRadius: '10px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  heading: {
-    textAlign: 'center',
-    marginBottom: '20px',
-    color: 'white',
-  },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '10px',
-    justifyContent: 'center',
-  },
-  gridItem: {
-    textAlign: 'center',
-    background: 'black',
-    padding: '20px', // increased padding
-    borderRadius: '5px',
-    color: 'white',
-    margin: '10px', // increased margin
-    width: '120px', // increased width
-    height: '120px', // increased height
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logo: {
-    maxWidth: '70px', // increased max width
-    maxHeight: '70px', // increased max height
-    marginBottom: '5px',
-  },
-  skillName: {
-    display: 'block',
-    color: 'white',
-  },
-};
-
-export default Skills;
+    },
+    skillName: {
+      color: 'white',
+      fontSize: '0.4em',
+    },
+  };
+  
+  export default Skills;
