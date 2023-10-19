@@ -20,7 +20,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '75vh',
+    height: '69vh',
     color: '#fff',
     padding: '0 20px',
   },

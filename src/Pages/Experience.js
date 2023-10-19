@@ -32,7 +32,7 @@ function Experience() {
     {
       logo: ITBoostAustraliaLogo,
       alt: 'IT BOOST Australia logo',
-      title: 'Web Development Intern',
+      title: 'Web Developer Intern',
       company: 'IT BOOST Australia · Internship',
       duration: 'May 2023 - Aug 2023',
       location: 'South Melbourne, Victoria, Australia · Hybrid',
@@ -84,7 +84,7 @@ function Experience() {
             {activePopupIndex === index && exp.skills && (
                 <div style={{
                     position: 'absolute',
-                    top: '100%',
+                    top: '10%',
                     left: '50%',
                     transform: 'translateX(-50%)',
                     backgroundColor: '#fff',

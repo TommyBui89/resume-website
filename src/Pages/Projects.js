@@ -29,7 +29,7 @@ function Projects() {
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
-    <div style={styles.container}>
+<   div style={styles.container}>
       <h2 style={styles.heading}>My GitHub Projects</h2>
       {loading ? (
         <p>Loading...</p>
@@ -41,11 +41,7 @@ function Projects() {
                 <a href={repo.html_url} target="_blank" rel="noopener noreferrer" style={styles.repoLink}>
                   {repo.name}
                 </a>
-                <p style={styles.repoDescription}>{repo.description}</p>
-                <div style={styles.repoStats}>
-                  <span style={styles.repoStat}><i className="fa fa-star" /> {repo.stargazers_count}</span>
-                  <span style={styles.repoStat}><i className="fa fa-code-fork" /> {repo.forks_count}</span>
-                </div>
+                {/* Removed the repo stats section */}
               </div>
             ))}
           </div>
@@ -72,7 +68,7 @@ const styles = {
     minHeight: '100vh',
   },
   heading: {
-    fontSize: '2em',
+    fontSize: '4rem',
     marginBottom: '20px',
     color:'white',
     textAlign: 'center', // Center the heading text
@@ -84,17 +80,21 @@ const styles = {
     alignItems: 'center',
   },
   repoCard: {
-    backgroundColor: '#fff',
-    padding: '15px',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)', // Add some opacity
+    backdropFilter: 'blur(10px)', // Add blur for the "glass" effect
+    border: '1px solid rgba(255, 255, 255, 0.2)', // Optional: subtle border    padding: '15px',
     margin: '10px 0',
     borderRadius: '8px',
     width: '60%',
     boxShadow: '0px 0px 15px 5px rgba(0,0,0,0.1)',
+    display:'flex',
+    justifyContent:'center',
   },
   repoLink: {
     fontSize: '1.5em',
     textDecoration: 'none',
     color: '#0366d6',
+    padding:'10px'
   },
   repoDescription: {
     marginTop: '10px',
@@ -113,21 +113,24 @@ const styles = {
     marginTop: '20px',
     display: 'flex',
     justifyContent: 'center',
+    padding: '10px 20px',
   },
   pageNumber: {
     margin: '0 5px',
     padding: '5px 10px',
     cursor: 'pointer',
     borderRadius: '5px',
-    backgroundColor: '#fff',
-    boxShadow: '0px 0px 5px 2px rgba(0,0,0,0.1)',
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+    backdropFilter: 'blur(5px)',
+    border: '1px solid rgba(255, 255, 255, 0.2)',
   },
   activePage: {
+    backgroundColor: 'rgba(3, 102, 214, 0.8)',
+    backdropFilter: 'blur(5px)',
     margin: '0 5px',
     padding: '5px 10px',
     cursor: 'pointer',
     borderRadius: '5px',
-    backgroundColor: '#0366d6',
     color: '#fff',
     boxShadow: '0px 0px 5px 2px rgba(0,0,0,0.1)',
   },

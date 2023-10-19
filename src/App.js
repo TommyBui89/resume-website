@@ -22,16 +22,17 @@ function App() {
     }, []);
 
     const containerStyle = {
-        display: 'flex',
+        // display: 'flex',
         width: '100vw',
         height: '100vh',
         backgroundImage: `url(${MainBackground})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         flexDirection: 'column',
-        overflow: 'hidden',
+        overflow: 'hidden',  // prevents potential scrolling issues
+        minHeight: '100vh'
     };
-
+    
     const innerDivStyle = {
         backdropFilter: 'blur(10px)',
         border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -39,8 +40,9 @@ function App() {
         borderRadius: '10px',
         padding: isMobile ? '10px' : '20px',
         margin: isMobile ? '20px' : '40px',
-        height: isMobile ? 'calc(100vh - 40px)' : 'calc(100vh - 80px)',
-    };
+        height: isMobile ? 'calc(100vh - 2 * (20px + 10px))' : 'calc(100vh - 80px)', 
+        overflowY: 'auto' 
+    };      
 
     return (
         <div style={containerStyle}>
