@@ -28,11 +28,6 @@ function Contact() {
           <a href="mailto:tommyvo007@gmail.com" style={styles.link}>tommyvo007@gmail.com</a>
         </p>
         <p style={isMobile ? styles.mobileContactItem : styles.contactItem}>
-          <i className="fa fa-phone" style={styles.icon}></i> 
-          <span style={styles.label}>Phone:</span> 
-          <a href="tel:0435339442" style={styles.link}>0435 339 442</a>
-        </p>
-        <p style={isMobile ? styles.mobileContactItem : styles.contactItem}>
           <i className="fa fa-linkedin" style={styles.icon}></i> 
           <span style={styles.label}>LinkedIn:</span> 
           <a href="https://www.linkedin.com/in/tommy-bui-0b242124b/" style={styles.link}>Tommy Bui</a>
@@ -112,7 +107,7 @@ const styles = {
   downloadButton: {
     display: 'inline-flex',
     alignItems: 'center',
-    backgroundColor: 'lightblue',
+    backgroundColor: 'rgba(3, 102, 214, 0.8)',
     color: 'white',
     padding: '10px 20px',
     textDecoration: 'none',

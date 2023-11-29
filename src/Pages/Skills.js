@@ -36,13 +36,13 @@ function Skills() {
     }, []);
   
     return (
-      <section style={{ ...styles.section, fontSize: isMobile ? '2rem' : '5rem' }}>
-        <h2 style={{fontSize: isMobile ? '2rem' : '4rem', color: 'white', marginBottom:'22px'}}>Skills</h2>
+      <section style={{ ...styles.section, fontSize: isMobile ? '5.56vw' : '3.47vw' }}>
+        <h2 style={{fontSize: isMobile ? '5.56vw' : '2.78vw', color: 'white', marginBottom:'1.53vw'}}>Skills</h2>
   
         <div style={{ ...styles.grid, flexDirection: isMobile ? 'column' : 'row' }}>
           {skillList.map((item, index) => (
             <div key={index} style={styles.gridItem}>
-              <img src={item.logo} alt={item.skill} style={{ maxWidth: isMobile ? '20vw' : '5vw', maxHeight: isMobile ? '20vw' : '5vw', marginBottom: '10px',}} />
+              <img src={item.logo} alt={item.skill} style={{ maxWidth: isMobile ? '20vw' : '5vw', maxHeight: isMobile ? '20vw' : '5vw', marginBottom: '1.39vw',}} />
               <span style={styles.skillName}>{item.skill}</span>
             </div>
           ))}
@@ -53,8 +53,8 @@ function Skills() {
   
   const styles = {
     section: {
-      padding: '20px',
-      borderRadius: '10px',
+      padding: '1.39vw',
+      borderRadius: '0.69vw',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -68,26 +68,23 @@ function Skills() {
       width: '100%',
     },
     gridItem: {
-      border: '1px solid white',
-      width: '250px',
-      height: '200px',
-      padding: '10px',
+      border: '0.07vw solid white',
+      width: '15vw',  // Adjusted from '17.36vw'
+      height: '11vw', // Adjusted from '13.89vw'
+      padding: '0.69vw',
       textAlign: 'center',
       position: 'relative',
-      borderRadius:'5px',
+      borderRadius: '0.35vw',
       background: 'rgba(0, 0, 0, 0.1)',
-      margin: '10px auto',
+      margin: '0.69vw auto',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
     },
-    logo: {
-
-    },
     skillName: {
       color: 'white',
-      fontSize: '0.4em',
+      fontSize: '1.11vw',
     },
   };
   

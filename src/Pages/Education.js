@@ -79,7 +79,7 @@ function Education() {
                 >
                     <div style={{ cursor: 'pointer' }}>
                         <img src={DeakinLogo} alt="Deakin University Logo" style={{ width: '100px', height: '100px' }} />
-                        <h3 style={{color:'white'}}>Information Technology</h3>
+                        <h3 style={{color:'white'}}>Information Technology & Robotics</h3>
                         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                             <p style={{color:'white'}}>Deakin University</p>
                             <p style={{color:'white'}}>03/2020 - 09/2020</p>

@@ -17,7 +17,7 @@ function Experience() {
       title: 'Web App Developer Intern',
       company: 'Spectar Group · Internship',
       duration: 'Aug 2023 - Present',
-      location: 'Melbourne, Victoria, Australia · Hybrid',
+      location: 'Melbourne, Victoria, Australia',
       skills: 'Skills: React.js, Node.js, Figma, Github',
     },
     {
@@ -35,7 +35,7 @@ function Experience() {
       title: 'Web Developer Intern',
       company: 'IT BOOST Australia · Internship',
       duration: 'May 2023 - Aug 2023',
-      location: 'South Melbourne, Victoria, Australia · Hybrid',
+      location: 'South Melbourne, Victoria, Australia',
       skills: 'Skills: SEO, HTML, CSS, Java, Figma, Github',
     },
   ];
