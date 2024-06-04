@@ -15,7 +15,7 @@ export const Bio = {
     "Recent Computer Science graduate from La Trobe University with a passion for solving real-world challenges. Eager to contribute to innovative projects and make a meaningful impact.",
   github: "https://github.com/TommyBui89",
   resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+    "https://drive.google.com/file/d/1fVi4G0wWn-7m8IJXexQGNlOTM_enQHM2/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/tommy-bui-0b242124b/",
 };
 
