@@ -19,7 +19,6 @@ const Navbar = () => {
           <NavLink href='#skills'>Skills</NavLink>
           <NavLink href='#experience'>Experience</NavLink>
           <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#education'>Education</NavLink>
         </NavItems>
         <ButtonContainer>
           <LinkedInButton href={Bio.linkedin} target="_blank">LinkedIn Profile</LinkedInButton>
