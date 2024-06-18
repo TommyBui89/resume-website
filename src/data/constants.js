@@ -1,5 +1,6 @@
 import DTSecurityImage from '../images/DTSecurity.jpg';
 import BroadmeadowsImage from '../images/BroadmeadowsPlaceMedicalCentre.jpg';
+import InsuranceImage from '../images/IntergratedInsuranceSolutions.png';
 
 import FigmaLogo from '../images/figma-logo.png';
 import NextLogo from '../images/nextjs-logo.png';
@@ -160,20 +161,43 @@ export const projects = [
       "DT Security is a website for a business that sells and installs security doors, roller shutters, curtains, windows, and flyscreens. The website provides detailed information about the products and services offered, and includes features such as product galleries, contact forms, and service descriptions.",
     image: DTSecurityImage,
     tags: ["React", "JavaScript", "CSS"],
-    category: "web app",
+    category: "website",
     github: "", // Add GitHub link if available
     webapp: "https://dtsecuritydoorsandshutters.com.au/",
   },
   {
     id: 1,
-    title: "Broadmeadows Place Medical Centre",
+    title: "Broadmeadows Place Medical Clinic",
     date: "February 2023 - March 2024",
     description:
-      "Broadmeadows Place Medical Centre is a user-friendly website created for a medical clinic. The website is built using WordPress and includes features such as appointment booking, service listings, and contact information to help patients easily access medical services.",
+      "Broadmeadows Place Medical Clinic is a user-friendly website created for a medical clinic. The website is built using WordPress and includes features such as appointment booking, service listings, and contact information to help patients easily access medical services.",
     image: BroadmeadowsImage,
-    tags: ["WordPress"],
-    category: "web app",
+    tags: ["WordPress", "CSS"],
+    category: "website",
     github: "", // Add GitHub link if available
     webapp: "https://broadmeadowsplacemc.com.au/",
+  },
+  {
+    id: 2,
+    title: "Integrated Insurance Solutions",
+    date: "March 2024 - Present",
+    description:
+      "Integrated Insurance Solutions is a website showcasing insurance options for users and businesses. It includes interactive features for user engagement, allowing users to explore different insurance plans and get personalized quotes.",
+    image: InsuranceImage,
+    tags: ["WordPress", "CSS"],
+    category: "website",
+    github: "", // Add GitHub link if available
+    webapp: "", // Add website link if available
+  },
+  {
+    id: 3,
+    title: "DKonnect",
+    date: "April 2024 - Present",
+    description:
+      "DKonnect is an e-commerce website that sells accessories including baby products, car accessories (Jeep, Suzuki, GWM), headlights, mobile phones, and electronics. It features a user-friendly interface, product listings, and secure payment options.",
+    tags: ["Wordpress","Woo-Commerence", "CSS"],
+    category: "e-commerce website",
+    github: "", // Add GitHub link if available
+    webapp: "", // Add website link if available
   },
 ];
