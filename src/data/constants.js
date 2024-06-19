@@ -11,6 +11,8 @@ import ExpressLogo from '../images/express-js-logo.png';
 import FirebaseLogo from '../images/firebase-logo.webp';
 import CssLogo from '../images/css-logo.webp';
 import HtmlLogo from '../images/html-logo.webp';
+import TypeScriptLogo from '../images/typescript-logo.png';
+import VueLogo from '../images/vue-Logo.png';
 
 export const Bio = {
   name: "Tommy Bui",
@@ -22,7 +24,7 @@ export const Bio = {
     "Recent Computer Science graduate from La Trobe University with a passion for solving real-world challenges. Eager to contribute to innovative projects and make a meaningful impact.",
   github: "https://github.com/TommyBui89",
   resume:
-    "https://drive.google.com/file/d/1fVi4G0wWn-7m8IJXexQGNlOTM_enQHM2/view?usp=sharing",
+    "https://drive.google.com/file/d/1NcyeObRgSxAMpLvfBL9wTPpUr524CckP/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/tommy-bui-0b242124b/",
 };
 
@@ -49,6 +51,14 @@ export const skills = [
       {
         name: "JavaScript",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+      },
+      {
+        name: "TypeScript",
+        image: TypeScriptLogo,
+      },
+      {
+        name: "Vue",
+        image: VueLogo,
       },
       {
         name: "Bootstrap",
@@ -120,35 +130,34 @@ export const skills = [
   },
 ];
 
-
 export const experiences = [
   {
-      title: "Web App Developer Intern",
-      subtitle: "SPECTAR GROUP",
-      date: "August 2023 - December 2023",
-      description: "Initiated and led the front-end development of a web application for an automated bot, focusing on enhancing user interaction and operational efficiency. Participated in all stages of the software development lifecycle, including planning, design, implementation, testing, and deployment. Provided consistent technical support and maintenance for the application to ensure optimal performance and reliability. Actively contributed to project meetings, presenting innovative ideas and progress updates, and addressing any challenges encountered during development.",
-      type: "work" 
+    title: "Web App Developer Intern",
+    subtitle: "SPECTAR GROUP",
+    date: "August 2023 - December 2023",
+    description: "Led the front-end development of a web application for an automated bot, enhancing user interaction and operational efficiency. Participated in planning, design, implementation, testing, and deployment stages. Provided technical support and maintenance for optimal performance. Contributed to project meetings with innovative ideas and progress updates.",
+    type: "work"
   },
   {
-      title: "Web Developer Intern and SEO Specialist Intern",
-      subtitle: "IT Boost Australia",
-      date: "May 2023 - August 2023",
-      description: "Developed and maintained web applications tailored to client needs, utilizing HTML, JavaScript, and CSS, which included the creation of a user-friendly website for Broadmeadows Place Medical Clinic using WordPress. Collaborated with design teams to translate visual concepts into functional online experiences. Performed routine site maintenance and updates to ensure continuous stability and relevance of content. Enhanced website visibility and user engagement by implementing SEO best practices.",
-      type: "work" 
+    title: "Web Developer Intern and SEO Specialist Intern",
+    subtitle: "IT Boost Australia",
+    date: "May 2023 - August 2023",
+    description: "Developed and maintained web applications using HTML, JavaScript, and CSS. Collaborated with design teams to create functional online experiences. Performed routine site maintenance and updates. Enhanced website visibility and engagement through SEO best practices.",
+    type: "work"
   },
   {
-      title: "Bachelor of Computer Science in Software Engineering",
-      subtitle: "La Trobe University, Melbourne",
-      date: "March 2021 - November 2023",
-      description: "Completed a Bachelor's degree in Computer Science with a focus on Software Engineering. Gained practical experience and developed a strong foundation in both front-end and back-end development.",
-      type: "education"
+    title: "Bachelor of Computer Science in Software Engineering",
+    subtitle: "La Trobe University, Melbourne",
+    date: "March 2021 - November 2023",
+    description: "Completed a Bachelor's degree in Computer Science with a focus on Software Engineering. Gained practical experience and developed a strong foundation in both front-end and back-end development.",
+    type: "education"
   },
   {
-      title: "High School (Year 12)",
-      subtitle: "Penola Catholic College, Victoria",
-      date: "February 2015 - November 2020",
-      description: "Completed high school education with a strong interest in computer science and technology.",
-      type: "education"
+    title: "High School (Year 12)",
+    subtitle: "Penola Catholic College, Victoria",
+    date: "February 2015 - November 2020",
+    description: "Completed high school education with a strong interest in computer science and technology.",
+    type: "education"
   }
 ];
 
@@ -158,7 +167,7 @@ export const projects = [
     title: "DT Security",
     date: "December 2023 - January 2024",
     description:
-      "DT Security is a website for a business that sells and installs security doors, roller shutters, curtains, windows, and flyscreens. The website provides detailed information about the products and services offered, and includes features such as product galleries, contact forms, and service descriptions.",
+      "A website for a business selling and installing security doors, roller shutters, curtains, and windows. Features include product galleries, contact forms, and service descriptions.",
     image: DTSecurityImage,
     tags: ["React", "JavaScript", "CSS"],
     category: "website",
@@ -170,7 +179,7 @@ export const projects = [
     title: "Broadmeadows Place Medical Clinic",
     date: "February 2023 - March 2024",
     description:
-      "Broadmeadows Place Medical Clinic is a user-friendly website created for a medical clinic. The website is built using WordPress and includes features such as appointment booking, service listings, and contact information to help patients easily access medical services.",
+      "A user-friendly website for a medical clinic. Built with WordPress, it includes appointment booking, service listings, and contact information.",
     image: BroadmeadowsImage,
     tags: ["WordPress", "CSS"],
     category: "website",
@@ -182,7 +191,7 @@ export const projects = [
     title: "Integrated Insurance Solutions",
     date: "March 2024 - Present",
     description:
-      "Integrated Insurance Solutions is a website showcasing insurance options for users and businesses. It includes interactive features for user engagement, allowing users to explore different insurance plans and get personalized quotes.",
+      "A website showcasing insurance options for users and businesses, with interactive features for exploring plans and getting quotes.",
     image: InsuranceImage,
     tags: ["WordPress", "CSS"],
     category: "website",
@@ -191,13 +200,14 @@ export const projects = [
   },
   {
     id: 3,
-    title: "DKonnect",
+    title: "DKonnect A",
     date: "April 2024 - Present",
     description:
-      "DKonnect is an e-commerce website that sells accessories including baby products, car accessories (Jeep, Suzuki, GWM), headlights, mobile phones, and electronics. It features a user-friendly interface, product listings, and secure payment options.",
-    tags: ["Wordpress","Woo-Commerence", "CSS"],
+      "An e-commerce website selling baby products, car accessories, headlights, mobile phones, and electronics. Features a user-friendly interface and secure payment options.",
+    tags: ["Wordpress", "WooCommerce", "CSS"],
     category: "e-commerce website",
     github: "", // Add GitHub link if available
     webapp: "", // Add website link if available
   },
 ];
+
