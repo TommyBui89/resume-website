@@ -14,9 +14,6 @@ import Experience from "./components/Experience";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 
-// Remove the import statement for StarsCanvas
-// import StarsCanvas from "./components/StarCanvas/StarsCanvas";
-
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
@@ -43,11 +40,19 @@ function App() {
         <Body>
           <HeroSection />
           <Wrapper>
-            <Skills />
-            <Experience />
+            <section id="skills">
+              <Skills />
+            </section>
+            <section id="experience">
+              <Experience />
+            </section>
           </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Contact />
+          <section id="projects">
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
           <Footer />
           {openModal.state && <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />}
         </Body>

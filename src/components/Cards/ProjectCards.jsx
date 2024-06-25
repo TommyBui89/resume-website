@@ -1,16 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styled from "styled-components";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Card = styled(motion.div)`
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.card};
   border-radius: 10px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   overflow: hidden;
   padding: 20px;
-  transition: all 0.5s ease-in-out;
   position: relative;
   flex-direction: ${(props) => (props.even ? "row-reverse" : "row")};
   &:hover {
@@ -21,6 +23,31 @@ const Card = styled(motion.div)`
 
   @media (max-width: 1100px) {
     flex-direction: column;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(
+      var(--color-primary),
+      transparent 60deg,
+      transparent 180deg,
+      var(--color-primary),
+      transparent 240deg
+    );
+    inset: -50%;
+    z-index: -1;
+    animation: spin 9s linear infinite;
+    border-radius: 10px;
+    opacity: 1;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(-360deg);
+    }
   }
 `;
 
@@ -122,12 +149,32 @@ const StyledImage = styled.img`
 
 const ProjectCards = ({ project, setOpenModal, index }) => {
   const ref = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  useEffect(() => {
+    const el = ref.current;
+
+    gsap.fromTo(el, 
+      { borderColor: 'transparent', borderWidth: '2px' }, 
+      { 
+        borderColor: '#6c63ff', 
+        borderWidth: '2px',
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        }
+      }
+    );
+  }, []);
 
   const isEven = index % 2 === 0;
 

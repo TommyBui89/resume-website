@@ -189,7 +189,7 @@ export const projects = [
   {
     id: 2,
     title: "Integrated Insurance Solutions",
-    date: "March 2024 - Present",
+    date: "May 2024 - June 2024",
     description:
       "A website showcasing insurance options for users and businesses, with interactive features for exploring plans and getting quotes.",
     image: InsuranceImage,
@@ -200,8 +200,8 @@ export const projects = [
   },
   {
     id: 3,
-    title: "DKonnect A",
-    date: "April 2024 - Present",
+    title: "DKonnect Accessories",
+    date: "June 2024 - Present",
     description:
       "An e-commerce website selling baby products, car accessories, headlights, mobile phones, and electronics. Features a user-friendly interface and secure payment options.",
     tags: ["Wordpress", "WooCommerce", "CSS"],

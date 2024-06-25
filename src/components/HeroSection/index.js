@@ -4,11 +4,13 @@ import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, Hero
 import HeroImg from '../../images/HeroImage.jpg'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
+import StarCanvas from '../StarCanvas/StarCanvas'
 
 const HeroSection = () => {
     return (
         <div id="about">
             <HeroContainer>
+                <StarCanvas/>
                 <HeroBg>
                     <HeroBgAnimation />
                 </HeroBg>
