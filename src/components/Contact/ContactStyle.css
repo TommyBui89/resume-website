@@ -13,7 +13,7 @@
   background-color: #1a1a2e;
   padding: 20px;
   border-radius: 20px;
-  width: 20%; /* Reduced width */
+  width: 30%; /* Adjusted width */
   margin: auto;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border: 0.1px solid rgb(133, 76, 230);
@@ -68,27 +68,25 @@
   border-radius: 10px;
   border: none;
   background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
   background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  transform: scale(1.05);
+  box-shadow: 20px 20px 60px #1F2634;
 }
 
 .earth-canvas-container {
   flex: 1;
   display: flex;
-  width: 50%;
+  width: 40%; /* Adjusted width */
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh; /* Adjusted height */
   z-index: 5;
 }
 
@@ -113,11 +111,11 @@
 
 @media (max-width: 1024px) {
   .contact-form-container {
-    width: 30%;
+    width: 40%;
   }
 
   .earth-canvas-container {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -141,6 +139,11 @@
   .contact-form button {
     padding: 8px 15px;
     font-size: 14px;
+  }
+
+  .contact-form button:hover {
+    transition: all 0.4s ease-in-out;
+    box-shadow: 20px 20px 60px #1F2634;
   }
 }
 
