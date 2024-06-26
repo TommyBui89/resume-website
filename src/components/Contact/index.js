@@ -46,11 +46,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact">
       <StarsCanvas />
       <div className="contact-form-container">
         <p>Get in touch</p>
-        <h3>Contact.</h3>
+        <h3>Contact</h3>
         <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
           <label>
             Your Name
