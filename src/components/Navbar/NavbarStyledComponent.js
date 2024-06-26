@@ -10,7 +10,7 @@ export const Nav = styled.div`
   font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   @media (max-width: 960px) {
     transition: 0.8s all ease;
   }

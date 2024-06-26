@@ -18,8 +18,8 @@ const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
   overflow-x: hidden;
-  position: relative; /* Ensure stars stay behind other content */
-  transition: background-color 0.3s ease; /* Smooth transition for theme change */
+  position: relative;
+  transition: background-color 0.3s ease;
 `;
 
 const Wrapper = styled.div`
