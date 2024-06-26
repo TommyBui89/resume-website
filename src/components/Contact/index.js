@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import './ContactStyle.css';
 import StarsCanvas from "../StarCanvas/StarCanvas.jsx";
-import EarthCanvas from "../EarthCanvas/EarthCanvas.jsx";
+import EarthCanvas from "../EarthCanvas/EarthCanvas.jsx"; 
 
 const Contact = () => {
   const formRef = useRef();
