@@ -1,13 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import './ContactStyle.css';
 import StarsCanvas from "../StarCanvas/StarCanvas.jsx";
-import EarthCanvas from "../EarthCanvas/EarthCanvas.jsx"; 
+import EarthCanvas from "../EarthCanvas/EarthCanvas.jsx";
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+    console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+    console.log('Public Key:', process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
