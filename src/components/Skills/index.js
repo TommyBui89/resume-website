@@ -43,7 +43,6 @@ const Title = styled.div`
   }
 `;
 
-
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -77,7 +76,7 @@ const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px; /* Add spacing between frontend, backend, and other */
+  gap: 50px;
   margin-top: 30px;
   overflow: hidden;
 `;
@@ -91,8 +90,11 @@ const SkillGroup = styled.div`
 
 const SkillList = styled.div`
   display: flex;
-  gap: 60px; /* Increase spacing between images */
+  gap: 60px;
   animation: ${({ direction }) => (direction === 'left' ? scrollLeft : scrollRight)} 60s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
 `;
 
 const SkillItem = styled.div`
@@ -102,9 +104,9 @@ const SkillItem = styled.div`
 `;
 
 const SkillImage = styled.img`
-  width: 80px; /* Increase size of the image */
-  height: 80px; /* Increase size of the image */
-  margin: 0 20px; /* Add margin between the left and right of the image */
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
 `;
 
 const Skills = () => (
