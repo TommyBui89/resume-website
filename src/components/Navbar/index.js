@@ -1,5 +1,9 @@
 import React from 'react';
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, LinkedInButton, ButtonContainer, MobileIcon, MobileMenu, MobileLink, MobileMenuButton } from './NavbarStyledComponent';
+import { 
+  Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, 
+  LinkedInButton, ButtonContainer, MobileIcon, MobileMenu, 
+  MobileLink, MobileMenuButton 
+} from './NavbarStyledComponent';
 import { Bio } from '../../data/constants';
 import { useTheme } from 'styled-components';
 import { Link } from 'react-scroll';
@@ -13,6 +17,15 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToTop = (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    setIsOpen(false); // Ensure the mobile menu closes if open
+  };
+
   return (
     <Nav>
       <NavbarContainer>
@@ -22,9 +35,7 @@ const Navbar = () => {
           </a>
         </NavLogo>
         <NavItems>
-          <NavLink>
-            <Link to="about" smooth={true} duration={500}>About</Link>
-          </NavLink>
+          <NavLink onClick={scrollToTop}>About</NavLink>
           <NavLink>
             <Link to="skills" smooth={true} duration={500}>Skills</Link>
           </NavLink>
@@ -45,9 +56,9 @@ const Navbar = () => {
           {isOpen ? <FaTimes /> : <FaBars />}
         </MobileIcon>
         {isOpen && (
-          <MobileMenu isOpen={isOpen}>
-            <MobileLink>
-              <Link to="about" smooth={true} duration={500} onClick={toggleMenu}>About</Link>
+          <MobileMenu>
+            <MobileLink onClick={(e) => { scrollToTop(e); setIsOpen(false); }}>
+              About
             </MobileLink>
             <MobileLink>
               <Link to="skills" smooth={true} duration={500} onClick={toggleMenu}>Skills</Link>

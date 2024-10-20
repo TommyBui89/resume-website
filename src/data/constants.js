@@ -24,7 +24,7 @@ export const Bio = {
     "Recent Computer Science graduate from La Trobe University with a passion for solving real-world challenges. Eager to contribute to innovative projects and make a meaningful impact.",
   github: "https://github.com/TommyBui89",
   resume:
-    "https://drive.google.com/file/d/1NcyeObRgSxAMpLvfBL9wTPpUr524CckP/view?usp=sharing",
+    "https://drive.google.com/file/d/1fVi4G0wWn-7m8IJXexQGNlOTM_enQHM2/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/tommy-bui-0b242124b/",
 };
 
@@ -132,7 +132,14 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "Web App Developer Intern",
+    title: "Software Developer Volunteer",
+    subtitle: "ASRC",
+    date: "June 2024 - Present",
+    description: "Led the front-end development of a web application for an automated bot, enhancing user interaction and operational efficiency. Participated in planning, design, implementation, testing, and deployment stages. Provided technical support and maintenance for optimal performance. Contributed to project meetings with innovative ideas and progress updates.",
+    type: "work"
+  },
+  {
+    title: "Full-Stack Developer Intern",
     subtitle: "SPECTAR GROUP",
     date: "August 2023 - December 2023",
     description: "Led the front-end development of a web application for an automated bot, enhancing user interaction and operational efficiency. Participated in planning, design, implementation, testing, and deployment stages. Provided technical support and maintenance for optimal performance. Contributed to project meetings with innovative ideas and progress updates.",
@@ -152,13 +159,6 @@ export const experiences = [
     description: "Completed a Bachelor's degree in Computer Science with a focus on Software Engineering. Gained practical experience and developed a strong foundation in both front-end and back-end development.",
     type: "education"
   },
-  {
-    title: "High School (Year 12)",
-    subtitle: "Penola Catholic College, Victoria",
-    date: "February 2015 - November 2020",
-    description: "Completed high school education with a strong interest in computer science and technology.",
-    type: "education"
-  }
 ];
 
 export const projects = [
@@ -169,7 +169,7 @@ export const projects = [
     description:
       "A website for a business selling and installing security doors, roller shutters, curtains, and windows. Features include product galleries, contact forms, and service descriptions.",
     image: DTSecurityImage,
-    tags: ["React", "JavaScript", "CSS"],
+    tags: ["React", "JavaScript", "TypeScript", "CSS", "Python"],
     category: "website",
     github: "", // Add GitHub link if available
     webapp: "https://dtsecuritydoorsandshutters.com.au/",
@@ -181,7 +181,7 @@ export const projects = [
     description:
       "A user-friendly website for a medical clinic. Built with WordPress, it includes appointment booking, service listings, and contact information.",
     image: BroadmeadowsImage,
-    tags: ["WordPress", "CSS"],
+    tags: ["WordPress", "Elementor"],
     category: "website",
     github: "", // Add GitHub link if available
     webapp: "https://broadmeadowsplacemc.com.au/",
@@ -193,21 +193,10 @@ export const projects = [
     description:
       "A website showcasing insurance options for users and businesses, with interactive features for exploring plans and getting quotes.",
     image: InsuranceImage,
-    tags: ["WordPress", "CSS"],
+    tags: ["WordPress", "Elementor"],
     category: "website",
     github: "", // Add GitHub link if available
-    webapp: "", // Add website link if available
-  },
-  {
-    id: 3,
-    title: "DKonnect Accessories",
-    date: "June 2024 - Present",
-    description:
-      "An e-commerce website selling baby products, car accessories, headlights, mobile phones, and electronics. Features a user-friendly interface and secure payment options.",
-    tags: ["Wordpress", "WooCommerce", "CSS"],
-    category: "e-commerce website",
-    github: "", // Add GitHub link if available
-    webapp: "", // Add website link if available
+    webapp: "https://integratedinsurancesolutions.com.au/", // Add website link if available
   },
 ];
 
