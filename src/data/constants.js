@@ -67,11 +67,27 @@ export const skills = [
 
 export const experiences = [
   {
+    title: "Full Stack Developer",
+    subtitle: "Jung Talent",
+    date: "October 2024 - Present",
+    description:
+      "Developing and maintaining full-stack web applications, collaborating with clients to deliver custom digital solutions using modern technologies.",
+    type: "work",
+  },
+  {
     title: "Software Developer Volunteer",
     subtitle: "ASRC",
     date: "June 2024 - Present",
     description:
-      "Led the front-end development of a web application for an automated bot, enhancing user interaction and operational efficiency. Participated in planning, design, implementation, testing, and deployment stages. Provided technical support and maintenance for optimal performance. Contributed to project meetings with innovative ideas and progress updates.",
+      "ASRC website improvement and upgrade, enhancing site performance and optimizing the user experience with new features and design updates.",
+    type: "work",
+  },
+  {
+    title: "Full Stack Developer",
+    subtitle: "Freelance",
+    date: "October 2023 - Present",
+    description:
+      "Developing and maintaining full-stack web applications, collaborating with clients to deliver custom digital solutions using modern technologies.",
     type: "work",
   },
   {
@@ -83,7 +99,7 @@ export const experiences = [
     type: "work",
   },
   {
-    title: "Web Developer Intern and SEO Specialist Intern",
+    title: "Front-End Developer and SEO Specialist Intern",
     subtitle: "IT Boost Australia",
     date: "May 2023 - August 2023",
     description:
