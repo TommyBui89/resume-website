@@ -129,16 +129,16 @@ export const skills = [
 ];
 
 export const experiences = [
+  // {
+  //   title: "Full Stack Developer",
+  //   subtitle: "Jung Talent",
+  //   date: "October 2024 - Present",
+  //   description:
+  //     "Developing and maintaining full-stack web applications, collaborating with clients to deliver custom digital solutions using modern technologies.",
+  //   type: "work",
+  // },
   {
-    title: "Full Stack Developer",
-    subtitle: "Jung Talent",
-    date: "October 2024 - Present",
-    description:
-      "Developing and maintaining full-stack web applications, collaborating with clients to deliver custom digital solutions using modern technologies.",
-    type: "work",
-  },
-  {
-    title: "Software Developer Volunteer",
+    title: "Website Developer/IT Support Volunteer",
     subtitle: "ASRC",
     date: "June 2024 - Present",
     description:
@@ -154,7 +154,7 @@ export const experiences = [
     type: "work",
   },
   {
-    title: "Full-Stack Developer Intern",
+    title: "Full-Stack Developer",
     subtitle: "SPECTAR GROUP",
     date: "August 2023 - December 2023",
     description:
@@ -162,7 +162,7 @@ export const experiences = [
     type: "work",
   },
   {
-    title: "Front-End Developer and SEO Specialist Intern",
+    title: "Front-End Developer and SEO Specialist",
     subtitle: "IT Boost Australia",
     date: "May 2023 - August 2023",
     description:
