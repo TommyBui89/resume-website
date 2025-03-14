@@ -16,6 +16,7 @@ import TypeScriptLogo from '../images/typescript-logo.png';
 import NetLogo from '../images/NET_Logo.png'
 import CLogo from '../images/c_icon.png'
 import MongodbLogo from '../images/mongodb_logo.webp'
+import TailwindLogo from '../images/tailwind-logo.png'
 
 export const Bio = {
   name: "Tommy Bui",
@@ -59,6 +60,10 @@ export const skills = [
       {
         name: "Bootstrap",
         image: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+      },
+      {
+        name: "Tailwind",
+        image: TailwindLogo,
       },
     ],
   },
