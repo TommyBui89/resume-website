@@ -13,16 +13,18 @@ import FirebaseLogo from '../images/firebase-logo.webp';
 import CssLogo from '../images/css-logo.webp';
 import HtmlLogo from '../images/html-logo.webp';
 import TypeScriptLogo from '../images/typescript-logo.png';
-import VueLogo from '../images/vue-Logo.png';
+import NetLogo from '../images/NET_Logo.png'
+import CLogo from '../images/c_icon.png'
+import MongodbLogo from '../images/mongodb_logo.webp'
 
 export const Bio = {
   name: "Tommy Bui",
-  roles: ["Full Stack Developer", "Programmer"],
+  roles: ["Full Stack Developer", "Software Engineer"],
   description:
-    "Recent Computer Science graduate from La Trobe University with a passion for solving real-world challenges. Eager to contribute to innovative projects and make a meaningful impact.",
+    "I am a passionate Software Engineer with hands-on experience in building and developing innovative applications. Skilled in full-stack development, with a strong foundation in React.js, Next.js, TypeScript, and .NET. Dedicated to crafting efficient, reliable, and secure software solutions while continuously refining my expertise to create impactful and scalable applications.",
   github: "https://github.com/TommyBui89",
   resume:
-    "https://drive.google.com/file/d/1FYyyRJbf0Tq1aj5N51OPlEBv4va-I4N8/view?usp=sharing",
+    "https://drive.google.com/file/d/1K3-Iz58icS1p31QReCg2wHSrLtYtDVgh/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/tommy-bui-0b242124b/",
 };
 
@@ -55,10 +57,6 @@ export const skills = [
         image: TypeScriptLogo,
       },
       {
-        name: "Vue",
-        image: VueLogo,
-      },
-      {
         name: "Bootstrap",
         image: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
       },
@@ -76,16 +74,16 @@ export const skills = [
         image: ExpressLogo,
       },
       {
-        name: "Firebase",
-        image: FirebaseLogo,
+        name: ".Net",
+        image: NetLogo,
+      },
+      {
+        name: "C#",
+        image: CLogo,
       },
       {
         name: "Python",
         image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-      },
-      {
-        name: "Java",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
       },
       {
         name: "MySQL",
@@ -94,6 +92,14 @@ export const skills = [
       {
         name: "Postgresql",
         image: "https://www.postgresql.org/media/img/about/press/elephant.png",
+      },
+      {
+        name: "MongoDB",
+        image: MongodbLogo,
+      },
+      {
+        name: "Firebase",
+        image: FirebaseLogo,
       },
     ],
   },
@@ -129,52 +135,67 @@ export const skills = [
 ];
 
 export const experiences = [
-  // {
-  //   title: "Full Stack Developer",
-  //   subtitle: "Jung Talent",
-  //   date: "October 2024 - Present",
-  //   description:
-  //     "Developing and maintaining full-stack web applications, collaborating with clients to deliver custom digital solutions using modern technologies.",
-  //   type: "work",
-  // },
   {
-    title: "Website Developer/IT Support Volunteer",
-    subtitle: "ASRC",
-    date: "June 2024 - Present",
-    description:
-      "ASRC website improvement and upgrade, enhancing site performance and optimizing the user experience with new features and design updates.",
+    title: "Software Developer / IT Support Volunteer",
+    subtitle: "ASRC (Asylum Seeker Resource Centre)",
+    date: "June 2024 - December 2024",
+    description: [
+      "Collaborated with the ICT Manager to enhance ASRC’s website, improving accessibility and user experience.",
+      "Optimized website performance, increasing page load speed from 61% to 91%.",
+      "Provided technical support, resolving 50+ hardware and software issues with a 95% success rate.",
+    ],
+    skills: ["Web Development", "IT Support", "Performance Optimization", "Accessibility"],
     type: "work",
   },
   {
-    title: "Full Stack Developer",
+    title: "Freelance Full Stack Developer",
     subtitle: "Freelance",
     date: "October 2023 - Present",
-    description:
-      "Developing and maintaining full-stack web applications, collaborating with clients to deliver custom digital solutions using modern technologies.",
+    description: [
+      "Designed and developed client websites using React.js, Next.js, TypeScript, .NET, C#, and Node.js.",
+      "Built RESTful APIs and integrated backend services to optimize data management.",
+      "Conducted SEO optimization, increasing organic traffic by 20%.",
+      "Improved site reliability by reducing website load times by 30% through performance enhancements and bug fixes.",
+    ],
+    skills: ["React.js", "Next.js", "TypeScript", ".NET", "C#", "Node.js", "SEO", "Web Performance"],
     type: "work",
   },
   {
-    title: "Full-Stack Developer",
-    subtitle: "SPECTAR GROUP",
+    title: "Software Developer",
+    subtitle: "Spectar Group",
     date: "August 2023 - December 2023",
-    description:
-      "Led the front-end development of a web application for an automated bot, enhancing user interaction and operational efficiency. Participated in planning, design, implementation, testing, and deployment stages. Provided technical support and maintenance for optimal performance. Contributed to project meetings with innovative ideas and progress updates.",
+    description: [
+      "Led front-end development for Specia, a virtual recruitment platform, improving process efficiency by 30% and user engagement by 40%.",
+      "Built reusable UI components, reducing development time by 25%.",
+      "Optimized app performance, cutting load times by 35%.",
+      "Deployed on Azure Cloud with 99.9% uptime.",
+    ],
+    skills: ["React.js", "Next.js", "TypeScript", "Azure", "Performance Optimization"],
     type: "work",
   },
   {
-    title: "Front-End Developer and SEO Specialist",
+    title: "Front-End Developer & SEO Specialist",
     subtitle: "IT Boost Australia",
     date: "May 2023 - August 2023",
-    description:
-      "Developed and maintained web applications using HTML, JavaScript, and CSS. Collaborated with design teams to create functional online experiences. Performed routine site maintenance and updates. Enhanced website visibility and engagement through SEO best practices.",
+    description: [
+      "Developed and maintained client websites using React.js, HTML, and CSS.",
+      "Partnered with backend developers to enhance UI/UX, reducing bounce rates by 15%.",
+      "Implemented SEO strategies, boosting organic traffic by 20%.",
+      "Improved site speed by 30% by optimizing assets and resolving bugs.",
+    ],
+    skills: ["React.js", "HTML", "CSS", "SEO", "UI/UX"],
     type: "work",
   },
   {
     title: "Bachelor of Computer Science in Software Engineering",
     subtitle: "La Trobe University, Melbourne",
     date: "March 2021 - November 2023",
-    description:
-      "Completed a Bachelor's degree in Computer Science with a focus on Software Engineering. Gained practical experience and developed a strong foundation in both front-end and back-end development.",
+    description: [
+      "Completed a Bachelor's degree in Computer Science with a focus on Software Engineering.",
+      "Gained hands-on experience in front-end and back-end development, database systems, and software engineering best practices.",
+      "Member of the Computer Science Student Society.",
+    ],
+    skills: ["Software Engineering", "Database Systems", "Front-End Development", "Back-End Development"],
     type: "education",
   },
 ];
@@ -185,9 +206,9 @@ export const projects = [
     title: "DT Security",
     date: "December 2023 - January 2024",
     description:
-      "A website for a business selling and installing security doors, roller shutters, curtains, and windows. Features include product galleries, contact forms, and service descriptions.",
+      "Developed a professional website for a security business, showcasing products such as security doors, roller shutters, curtains, and windows. Implemented product galleries, service pages, and a contact form for seamless customer inquiries.",
     image: DTSecurityImage,
-    tags: ["React", "JavaScript", "TypeScript", "CSS", "Python"],
+    tags: ["React", "JavaScript", "TypeScript", "CSS", "Next.JS", "Node.js"],
     category: "website",
     webapp: "https://dtsecuritydoorsandshutters.com.au/",
   },
@@ -196,7 +217,7 @@ export const projects = [
     title: "Broadmeadows Place Medical Clinic",
     date: "February 2023 - March 2024",
     description:
-      "A user-friendly website for a medical clinic. Built with WordPress, it includes appointment booking, service listings, and contact information.",
+      "Designed and built a modern website for a medical clinic, featuring an intuitive appointment booking system, service listings, and essential clinic details to enhance patient engagement.",
     image: BroadmeadowsImage,
     tags: ["WordPress", "Elementor"],
     category: "website",
@@ -207,7 +228,7 @@ export const projects = [
     title: "Integrated Insurance Solutions",
     date: "May 2024 - June 2024",
     description:
-      "A website showcasing insurance options for users and businesses, with interactive features for exploring plans and getting quotes.",
+      "Created a responsive and user-friendly platform for an insurance provider, allowing users to explore plans, request quotes, and access essential policy information effortlessly.",
     image: InsuranceImage,
     tags: ["WordPress", "Elementor"],
     category: "website",
@@ -218,17 +239,9 @@ export const projects = [
     title: "Digital Crafters",
     date: "July 2024 - August 2024",
     description:
-      "A website and SaaS business specializing in creating custom digital solutions, including portfolio sites and web applications.",
+      "Developed an interactive platform for a digital solutions business, offering web development services, portfolio showcases, and tailored SaaS solutions for clients.",
     image: DigitalImages,
-    tags: [
-      "JavaScript",
-      "React.js",
-      "HTML",
-      "CSS",
-      "Node.js",
-      "Git",
-      "Botpress",
-    ],
+    tags: ["JavaScript", "React.js", "HTML", "CSS", "Node.js", "Git", "Botpress"],
     category: "website",
     webapp: "https://digital-crafters-website.vercel.app/",
   },

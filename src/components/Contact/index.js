@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion"; // Import Framer Motion
 import emailjs from "@emailjs/browser";
 import './ContactStyle.css';
 import StarsCanvas from "../StarCanvas/StarCanvas.jsx";
@@ -8,12 +9,9 @@ const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
-    console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-    console.log('Public Key:', process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
-  }, []);
+  
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-50px" }); // Detects when in view
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -45,16 +43,27 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          console.error("Failed to send message:", error);
           alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
 
   return (
-    <div className="contact-section" id="contact">
+    <motion.div
+      className="contact-section"
+      id="contact"
+      ref={sectionRef}
+      initial={{ opacity: 0, y: 50 }} // Start hidden & moved down
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate when scrolling in/out
+      transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
+    >
       <StarsCanvas />
-      <div className="contact-form-container">
+      <motion.div
+        className="contact-form-container"
+        initial={{ opacity: 0, scale: 0.9 }} // Start faded & slightly smaller
+        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }} // Animate in/out
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      >
         <p>Get in touch</p>
         <h3>Contact</h3>
         <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
@@ -77,7 +86,6 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your email?"
               aria-label="Your Email"
               required
             />
@@ -89,18 +97,28 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What do you want to say?"
               aria-label="Your Message"
               required
             />
           </label>
-          <button type="submit">{loading ? "Sending..." : "Send"}</button>
+          <motion.button
+            type="submit"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {loading ? "Sending..." : "Send"}
+          </motion.button>
         </form>
-      </div>
-      <div className="earth-canvas-container">
+      </motion.div>
+      <motion.div
+        className="earth-canvas-container"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }} // Animates when in view
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+      >
         <EarthCanvas />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
