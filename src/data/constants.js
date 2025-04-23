@@ -2,6 +2,8 @@ import DTSecurityImage from '../images/DTSecurity.jpg';
 import BroadmeadowsImage from '../images/BroadmeadowsPlaceMedicalCentre.jpg';
 import InsuranceImage from '../images/IntergratedInsuranceSolutions.png';
 import DigitalImages from '../images/DigitalCrafters.png';
+import TSSImage from '../images/TSS.png';
+import FizzBuzzImage from '../images/FizzBuzz.png';
 
 import FigmaLogo from '../images/figma-logo.png';
 import NextLogo from '../images/nextjs-logo.png';
@@ -141,15 +143,14 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "Software Developer / IT Support Volunteer",
+    title: "Software Developer Volunteer",
     subtitle: "ASRC (Asylum Seeker Resource Centre)",
     date: "June 2024 - December 2024",
     description: [
       "Collaborated with the ICT Manager to enhance ASRC’s website, improving accessibility and user experience.",
       "Optimized website performance, increasing page load speed from 61% to 91%.",
-      "Provided technical support, resolving 50+ hardware and software issues with a 95% success rate.",
     ],
-    skills: ["Web Development", "IT Support", "Performance Optimization", "Accessibility"],
+    skills: ["Web Development", "Performance Optimization", "Accessibility"],
     type: "work",
   },
   {
@@ -159,10 +160,9 @@ export const experiences = [
     description: [
       "Designed and developed client websites using React.js, Next.js, TypeScript, .NET, C#, and Node.js.",
       "Built RESTful APIs and integrated backend services to optimize data management.",
-      "Conducted SEO optimization, increasing organic traffic by 20%.",
       "Improved site reliability by reducing website load times by 30% through performance enhancements and bug fixes.",
     ],
-    skills: ["React.js", "Next.js", "TypeScript", ".NET", "C#", "Node.js", "SEO", "Web Performance"],
+    skills: ["React.js", "Next.js", "TypeScript", ".NET", "C#", "Node.js", "Web Performance"],
     type: "work",
   },
   {
@@ -179,16 +179,15 @@ export const experiences = [
     type: "work",
   },
   {
-    title: "Front-End Developer & SEO Specialist",
+    title: "Front-End Developer",
     subtitle: "IT Boost Australia",
     date: "May 2023 - August 2023",
     description: [
       "Developed and maintained client websites using React.js, HTML, and CSS.",
       "Partnered with backend developers to enhance UI/UX, reducing bounce rates by 15%.",
-      "Implemented SEO strategies, boosting organic traffic by 20%.",
       "Improved site speed by 30% by optimizing assets and resolving bugs.",
     ],
-    skills: ["React.js", "HTML", "CSS", "SEO", "UI/UX"],
+    skills: ["React.js", "HTML", "CSS", "UI/UX"],
     type: "work",
   },
   {
@@ -205,33 +204,43 @@ export const experiences = [
   },
 ];
 
+
 export const projects = [
   {
     id: 0,
-    title: "DT Security",
-    date: "December 2023 - January 2024",
+    title: "Talent Spree Solutions",
+    date: "January 2025 – March 2025",
     description:
-      "Developed a professional website for a security business, showcasing products such as security doors, roller shutters, curtains, and windows. Implemented product galleries, service pages, and a contact form for seamless customer inquiries.",
-    image: DTSecurityImage,
-    tags: ["React", "JavaScript", "TypeScript", "CSS", "Next.JS", "Node.js"],
-    category: "website",
-    webapp: "https://dtsecuritydoorsandshutters.com.au/",
+      "Built a full-stack recruitment platform with a Next.js frontend and .NET Core backend. Implemented a custom CRM to manage job listings and applications, with real-time status updates and data handling via RESTful APIs and MongoDB.",
+    image: TSSImage,
+    tags: ["Next.js", "React", "TypeScript", ".NET Core", "MongoDB", "JWT", "Azure"],
+    category: "webapp",
   },
   {
     id: 1,
-    title: "Broadmeadows Place Medical Clinic",
-    date: "February 2023 - March 2024",
+    title: "Custom FizzBuzz Game",
+    date: "December 2024 – December 2024",
     description:
-      "Designed and built a modern website for a medical clinic, featuring an intuitive appointment booking system, service listings, and essential clinic details to enhance patient engagement.",
-    image: BroadmeadowsImage,
-    tags: ["WordPress", "Elementor"],
-    category: "website",
-    webapp: "https://broadmeadowsplacemc.com.au/",
+      "Engineered a customizable FizzBuzz game engine with a .NET 8 backend and React + Vite frontend. Included live gameplay logic, rule configuration, scoring, and Docker-based deployment for local testing and scalability.",
+    image: FizzBuzzImage,
+    tags: ["React", "Vite", ".NET 8", "EF Core", "SQLite", "Docker", "TypeScript"],
+    category: "webapp",
   },
   {
     id: 2,
+    title: "Digital Crafters",
+    date: "July 2024 – August 2024",
+    description:
+      "Developed an interactive platform for a digital solutions business, offering web development services, portfolio showcases, and tailored SaaS solutions for clients.",
+    image: DigitalImages,
+    tags: ["JavaScript", "React.js", "HTML", "CSS", "Node.js", "Git", "Botpress"],
+    category: "website",
+    webapp: "https://digital-crafters-website.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Integrated Insurance Solutions",
-    date: "May 2024 - June 2024",
+    date: "May 2024 – June 2024",
     description:
       "Created a responsive and user-friendly platform for an insurance provider, allowing users to explore plans, request quotes, and access essential policy information effortlessly.",
     image: InsuranceImage,
@@ -240,14 +249,25 @@ export const projects = [
     webapp: "https://integratedinsurancesolutions.com.au/",
   },
   {
-    id: 3,
-    title: "Digital Crafters",
-    date: "July 2024 - August 2024",
+    id: 4,
+    title: "Broadmeadows Place Medical Clinic",
+    date: "February 2024 – March 2024",
     description:
-      "Developed an interactive platform for a digital solutions business, offering web development services, portfolio showcases, and tailored SaaS solutions for clients.",
-    image: DigitalImages,
-    tags: ["JavaScript", "React.js", "HTML", "CSS", "Node.js", "Git", "Botpress"],
+      "Designed and built a modern website for a medical clinic, featuring an intuitive appointment booking system, service listings, and essential clinic details to enhance patient engagement.",
+    image: BroadmeadowsImage,
+    tags: ["WordPress", "Elementor"],
     category: "website",
-    webapp: "https://digital-crafters-website.vercel.app/",
+    webapp: "https://broadmeadowsplacemc.com.au/",
+  },
+  {
+    id: 5,
+    title: "DT Security Doors and Shutters",
+    date: "December 2023 – January 2024",
+    description:
+      "Developed a professional website for a security business, showcasing products such as security doors, roller shutters, curtains, and windows. Implemented product galleries, service pages, and a contact form for seamless customer inquiries.",
+    image: DTSecurityImage,
+    tags: ["React", "JavaScript", "TypeScript", "CSS", "Next.js", "Node.js"],
+    category: "website",
+    webapp: "https://dtsecuritydoorsandshutters.com.au/",
   },
 ];
